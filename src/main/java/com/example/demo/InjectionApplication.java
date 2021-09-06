@@ -8,7 +8,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class InjectionApplication {
 
 	public static void main(String[] args) {
+
 		ConfigurableApplicationContext context =	SpringApplication.run(InjectionApplication.class, args);
+		Customers c = context.getBean(Customers.class);
+		c.display();
 	}
 
 }
